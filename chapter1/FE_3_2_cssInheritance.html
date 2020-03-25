@@ -1,0 +1,42 @@
+<!--
+* [Boostcourse] Web Programming
+* Chapter1. Web Programming 기초
+* 4) CSS-FE
+* 2강. CSS 상속과 우선순위 결정
+* 2020.03.25.Wed
+ # 2-1.상위에서 적용한 스타일은 하위에도 반영된다.
+ # font-size, color: 상속 가능
+ # 배치와 관련된 border, padding 등은 상속이 되지 않는다.
+ # 2-2. Cascading(css specificity)
+ # CSS는 여러가지 스타일정보를 기반으로 최종적으로 '경쟁'에 의해서 적절한 스타일이 반영된다.
+ # 선언방식에 따른 차이: inline>internal>external
+ # 동일하면 나중의 것이 우선적으로 적용
+ # 더 구체적으로 표현된 것을 우선적으로 적용
+ # id가 class보다 우선적으로 적용(id>class>element)
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<style media="screen">
+			body > div {
+				color : green;
+				font-size : 30px;
+				border:2px solid slatergray;
+				padding : 30 px;
+			}
+		</style>
+	</head>
+	<body>
+	<div>
+		<span>my text is upper!</span>
+		<ul>
+			<li>
+				<span>my text is dummy</span>
+				<div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	</body>
+</html>

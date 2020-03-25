@@ -1,0 +1,31 @@
+<!--
+* [Boostcourse] Web Programming
+* Chapter1. Web Programming 기초
+* 4) CSS-FE
+* 4강. CSS 기본 Style 변경하기
+* 2020.03.25.Wed
+ #font-size, background-color, font-family etc
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<style media="screen">
+			body>div{
+				/*기본 값이 32px로 상속됨*/
+				font-size:32px;
+				background-color:#ff0;
+				font-family:sans-serif;
+			}
+			.myspan{
+				color:#f00;
+				/*1em:상속 받은 기본 값*/
+				font-size:1em;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span class="myspan">my text is upper!</span>
+		</div>
+	</body>
+</html>

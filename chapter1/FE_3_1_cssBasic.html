@@ -1,0 +1,30 @@
+<!--
+* [Boostcourse] Web Programming
+* Chapter1. Web Programming 기초
+* 4) CSS-FE
+* 1강. CSS 선언방법
+* 2020.03.25.Wed
+ # selector(선택자), property, value로 구성된다.
+ # span { color :red; }
+ # inline : html 태그 안에 넣는다.(우선순위1), 유지보수가 어려움)
+ # internal: head에 style 적용(우선순위2), 별도의 css 파일 관리 안해도
+ # external: 외부(.css)로 지정함(우선순위3)
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      div > p{
+        font-size:40px;
+      }
+    </style>
+    <link rel="stylesheet" href="css_basic.css">
+  </head>
+  <body>
+    <div>
+      <p style="color:blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!--
+* [Boostcourse] Web Programming
+* Chapter1. Web Programming 기초
+* 4) CSS-FE
+* 3강. CSS Selector
+* 2020.03.25.Wed
+ # CSS Selector: HTML요소를 tag, id, class, html 태그 속성등을 통해 쉽게 찾아주는 방법
+ # element에 style을 지정하기 위해서 3가지 기본 선택자를 사용할 수 있음(tag, id, class)
+ # tag: span, div 태그명
+ # 그룹 선택 가능: h1,span,div/h1,span, div#id/h1.span,div.classname etc...
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<style media="screen">
+			/*span tag로 style 적용*/
+			span{
+				color : red;
+			}
+			/*id로 style 적용*/
+			span#myspan{
+				color:orange;
+			}
+			/*class로 style 적용*/
+			.myspanclass{
+				color: blue;
+			}
+			/*nth-child: n번째 자식 요소를 선택*/
+			#jisu>p:nth-child(2){color:red;}
+		</style>
+	</head>
+	<body>
+		<div id="jisu">
+			<h2>단락 선택</h2>
+			<p>첫번째 단락입니다.</p>
+			<p>두번째 단락입니다.</p>
+			<p>세번째 단락입니다.</p>
+			<p>네번째 단락입니다.</p>
+		</div>
+		<div>
+			<span id="myspan">my text is upper!</span>
+			<ul>
+				<li>
+					<span>my text is dummy</span>
+					<div class="myspanclass">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

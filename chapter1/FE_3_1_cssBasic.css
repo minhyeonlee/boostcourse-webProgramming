@@ -1,0 +1,4 @@
+div > p {
+  color:red; /*inline css때문에 적용되지 않음*/
+  border : 1px solid slategray;
+}
