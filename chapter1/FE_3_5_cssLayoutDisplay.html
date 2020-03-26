@@ -1,0 +1,47 @@
+<!--
+* [Boostcourse] Web Programming
+* Chapter1. Web Programming 기초
+* 4) CSS-FE
+* 5강. Element가 배치되는 방법(CSS layout) - Display
+* 2020.03.26.Thur
+
+ # Element를 화면에 배치하는 것을 layout 작업, Rendering 과정이라고 한다.
+ # Element는 위에서 아래로 순서대로 블럭을 이루며 배치되는 것이 기본이다.
+ # 하지만 웹사이트의 배치는 다양하게 표현 가능해야 하기때문에, css에서 추가적인 속성을 제공한다.
+ # display(block, inline, inline-block)
+ # 1. display속성이 block이거나 inline-block인 경우 엘리먼트는 벽돌을 쌓듯 블록을 가지고 쌓임
+ # 2. inline속성 : 옆으로 흐르는 엘리먼트
+ # 2-1. display 속성이 inline인 경우는 우측으로, 그리고 아래쪽으로 빈자리를 차지하며 흐른다.
+ # 2-2. inline속성의 엘리먼트는 뫂이와 넓이를 지정해도 반영되지 않는다.
+
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<style media="screen">
+			div, p{
+				width:100px;
+				height:100px;
+				border:1px solid gray;
+				display: inline; /*block속성을 inline으로 변경할 수 있다.*/
+			}
+			.inlinePrac > * {
+				display:block; /*inline속성을 block으로 변경할 수 있다.*/
+				border: 1px solid gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div>div1</div>
+		<div>div2</div>
+		<p>p tag</p>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+		<div class="inlinePrac">
+			<span>나는 어떻게 배치되나요?</span>
+			<span>좌우로 배치되는군요</span>
+			<a href="#">링크는요?</a>
+			<strong>링크도 강조도 모두 좌우로 흐르는군요</strong>
+			모두다 display 속성이 inline인 엘리먼트이기 때문입니다.
+		</div>
+	</body>
+</html>

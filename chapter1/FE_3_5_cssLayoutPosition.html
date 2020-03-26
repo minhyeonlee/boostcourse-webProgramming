@@ -1,0 +1,31 @@
+<!--
+* [Boostcourse] Web Programming
+* Chapter1. Web Programming 기초
+* 4) CSS-FE
+* 5강. Element가 배치되는 방법(CSS layout)-Position
+* 2020.03.26.Thur
+
+ # position(static, absolute, relative, fixed)
+ # 1. position속성은 기본 static이다. 그냥 순서대로 배치된다.
+ # 2. absolute는 기준점에 따라서 특별한 위치에 위치한다.
+ # 2-1. top/left/right/bottom으로 설정한다.
+ # 2-2. 기준점을 상위 element로 단계적으로 찾아가는데 static이 아닌 position이 기준점이다.
+ # 3. relative는 원래 자신이 위치해야 할 곳을 기준으로 이동한다.
+ # 3-1. top/left/right/bottom으로 설정한다.
+ # 4. fixed는 viewpoint(전체화면)좌측, 맨위를 기준으로 동작한다.
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<link rel="stylesheet" href="FE_3_5_cssLayoutPosition.css">
+
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="static">static(default)</div>
+			<div class="relative">relative(left:10px)</div>
+			<div class="absolute">absolute(left:130px;top:30px)</div>
+			<div class="fixed">fixed(top:250px)</div>
+		</div>
+	</body>
+</html>
