@@ -156,7 +156,7 @@
       <Context docBase="exam31" path="/exam31" reloadable="true" source="org.eclipse.jst.jee.server:exam31"/>
       <Context docBase="exam25" path="/exam25" reloadable="true" source="org.eclipse.jst.jee.server:exam25"/>
       <Context docBase="mavenweb" path="/mavenweb" reloadable="true" source="org.eclipse.jst.jee.server:mavenweb"/>
-  	  </Host>
+  	  <Context docBase="webapiexam" path="/webapiexam" reloadable="true" source="org.eclipse.jst.jee.server:webapiexam"/></Host>
     </Engine>
   </Service>
 </Server>
