@@ -1,0 +1,30 @@
+<!--
+* [Boostcourse] Web Programming
+* Chapter3. 웹 앱 개발: 예약서비스 1/4
+* 2) DOM API 활용-FE
+* 1강. DOM Node 조작하기
+* 2020.05.07.Tue
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate obcaecati earum assumenda esse iste sunt. Iure quibusdam, consectetur vel repellendus voluptatibus eaque esse cupiditate nihil, perferendis quidem quae unde odit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo magni ex atque iure sequi necessitatibus a delectus expedita perferendis ratione veniam amet eveniet magnam dolores reprehenderit, laudantium iste temporibus commodi!</p>
+  </div>
+
+  <script type="text/javascript">
+    var base = document.querySelector("div");
+    base.insertAdjacentHTML("afterbegin", "<h1>hello world</h1>");
+
+    var base2 = document.querySelector("p:nth-child(3)");
+    base2.insertAdjacentHTML("beforebegin", "<p>나는 가운데 끼였어요.</p>")
+  </script>
+</body>
+</html>

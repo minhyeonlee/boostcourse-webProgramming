@@ -1,0 +1,43 @@
+<!--
+* [Boostcourse] Web Programming
+* Chapter3. 웹 앱 개발: 예약서비스 1/4
+* 2) DOM API 활용-FE
+* 2강. DOM APIs 실습
+* 2020.05.07.Tue
+
+ # 실습1. 지금 나온 DOM API를 사용해서, strawberry 아래에 새로운 과일을 하나 더 추가하시오. 추가 된 이후에는 다시 삭제하시오.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+	<style media="screen">
+		li{
+		  list-style:none;
+		  font-size:1.4em;
+		  margin-bottom:10px;
+		}
+	</style>
+</head>
+<body>
+  <h1>selector test</h1>
+
+  <ul>
+    <li>apple</li>
+    <li>orange</li>
+    <li>banana</li>
+    <li>grape</li>
+    <li>strawberry</li>
+  </ul>
+	<script type="text/javascript">
+		var mango = document.createElement("li");
+		var mangoText = document.createTextNode("망고");
+		mango.appendChild(mangoText);
+
+		var parent = document.querySelector("ul");
+		parent.appendChild(mango);
+	</script>
+</body>
+</html>

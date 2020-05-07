@@ -1,0 +1,48 @@
+<!--
+* [Boostcourse] Web Programming
+* Chapter3. 웹 앱 개발: 예약서비스 1/4
+* 2) DOM API 활용-FE
+* 2강. DOM APIs 실습
+* 2020.05.07.Tue
+
+ # 실습5. class 가 'red'인 노드만 삭제하시오.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style media="screen">
+    li{
+      list-style:none;
+      font-size:1.4em;
+      margin-bottom:10px;
+    }
+    .red{
+      color:#f00;
+    }
+  </style>
+</head>
+<body>
+  <h1>selector test</h1>
+
+  <ul>
+    <li class="red">apple</li>
+    <li class="red">orange</li>
+    <li>banana</li>
+    <li>grape</li>
+    <li>strawberry</li>
+  </ul>
+
+  <script type="text/javascript">
+    parent = document.querySelector("ul");
+    reds = document.querySelectorAll("li.red");
+
+    for(var i=0; i<reds.length; i++){
+      parent.removeChild(reds[i]);
+    }
+
+  </script>
+</body>
+</html>
