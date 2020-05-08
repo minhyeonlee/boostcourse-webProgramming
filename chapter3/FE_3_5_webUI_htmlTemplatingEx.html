@@ -1,0 +1,46 @@
+<!--
+* [Boostcourse] Web Programming
+* Chapter3. 웹 앱 개발: 예약서비스 1/4
+* 5) WEB UI
+* 5강. HTML templating 실습
+* 2020.05.08.Wed
+-->
+<html>
+	<head>
+		<style media="screen">
+			.content > li{
+				border:1px solid gray;
+				list-style:none;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>template test example</h2>
+		<ul class="content"></ul>
+	</body>
+
+	<!-- html중 script 태그는 type이 javascript가 아니라면, 렌더링하지 않고 무시합니다. -->
+	<script id="template-list-item" type="text/template">
+		<li>
+			<h4>{title}</h4><p>{content}</p><div>{price}</div>
+		</li>
+	</script>
+
+	<script>
+		//mock data. 서버에서 가져온 데이터
+		var data = [
+			{title:"hello", content:"lorem lorem", price:2000},
+			{title:"hello", content:"lorem lorem", price:2000}
+		];
+
+		// html의 script에서 가져온 html template.
+		var resultHTML = ""
+		for(var i=0; i<data.length; i++){
+				var html = document.querySelector("#template-list-item").innerHTML;
+				resultHTML += html.replace("{title}", data[i].title)
+															.replace("{content}", data[i].content)
+															.replace("{price}", data[i].price);
+		}
+		document.querySelector(".content").innerHTML = resultHTML;
+	</script>
+</html>
