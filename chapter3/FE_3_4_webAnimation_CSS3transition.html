@@ -1,0 +1,33 @@
+<!--
+* [Boostcourse] Web Programming
+* Chapter3. 웹 앱 개발: 예약서비스 1/4
+* 4) Web Animation
+* 3강. CSS3 transition
+* 2020.05.08.Wed
+
+*
+-->
+<html>
+  <head>
+    <style media="screen">
+      .outside{
+        position: relative;
+        background-color: blueviolet;
+        width:100px;
+        height: 50px;
+        font-size:0.08em;
+        color:#fff;
+        left: 100px;
+        top: 100px;
+        transform: scale(1);
+        transition: left 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outside" style="left:100px;">제가 좋아하는 과일은요...</div>
+    <button>right!</button>
+  </body>
+  <script type="text/javascript" src = "FE_3_4_webAnimation_CSS3transition.js">
+  </script>
+</html>

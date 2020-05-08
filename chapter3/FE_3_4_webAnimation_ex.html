@@ -1,0 +1,35 @@
+<!--
+* [Boostcourse] Web Programming
+* Chapter3. 웹 앱 개발: 예약서비스 1/4
+* 4) Web Animation
+* 실습: 특정 엘리먼트를 만들고, 그 엘리먼트에 transition 속성을 주고, hover했을 때 좌측 상단에서, 우측 하단으로 움직이는 animation을 만들어보세요.
+* 2020.05.08.Wed
+
+*
+-->
+<html>
+  <head>
+    <style media="screen">
+      #myBox{
+        position: relative;
+        background-color: skyblue;
+        width:50px;
+        height: 50px;
+        font-size:0.08em;
+        color:#fff;
+        left: 100px;
+        top: 100px;
+        transform: scale(1);
+        transition: all 1s ease-in-out;
+      }
+      #myBtn{
+        background-color:pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myBox" style="left:0px; top:10px;"></div>
+  </body>
+  <script type="text/javascript" src = "FE_3_4_webAnimation_ex.js">
+  </script>
+</html>
