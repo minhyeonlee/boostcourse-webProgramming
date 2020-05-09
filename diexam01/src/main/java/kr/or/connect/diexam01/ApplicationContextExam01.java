@@ -14,9 +14,8 @@ public class ApplicationContextExam01 {
 		System.out.println(userBean.getName());
 		
 		UserBean userBean2 = (UserBean)ac.getBean("userBean");
-		
 		if(userBean == userBean2) {
-			System.out.println("같은 인스턴스입니다.");
+			System.out.println("같은 인스턴스이다.");
 		}
 	}
 
